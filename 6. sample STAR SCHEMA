@@ -1,0 +1,128 @@
+6.	Create sample star schema for e-commerce dashboard
+Below is a complete Power BI lab-style explanation to create a sample STAR SCHEMA for an E-Commerce dashboard, written step by step, assuming you are doing it inside Power BI Desktop.
+________________________________________
+🛒 Power BI Lab
+Create a Sample Star Schema for an E-Commerce Dashboard
+ 
+ 
+ 
+________________________________________
+🎯 Objective
+By the end of this lab, you will:
+•	Understand what a Star Schema is
+•	Create Fact & Dimension tables
+•	Build relationships in Model View
+•	Prepare the model for accurate DAX & reporting
+________________________________________
+⭐ What is a Star Schema? (Very Simple)
+A Star Schema has:
+•	1 Fact table (numbers / transactions)
+•	Multiple Dimension tables (descriptions)
+•	One-to-many relationships
+•	Looks like a ⭐ star in Model View
+✔ Faster reports
+✔ Correct aggregations
+✔ Easy DAX
+________________________________________
+📦 Business Scenario (E-Commerce)
+An online store wants to analyze:
+•	Sales
+•	Customers
+•	Products
+•	Time
+•	Geography
+________________________________________
+🧱 Step 1: Identify Tables (Star Schema Design)
+🔵 Fact Table
+Fact_Sales
+•	OrderID
+•	OrderDateKey
+•	ProductKey
+•	CustomerKey
+•	SalesAmount
+•	Quantity
+•	Discount
+🟡 Dimension Tables
+1.	Dim_Date
+2.	Dim_Product
+3.	Dim_Customer
+4.	Dim_Geography
+________________________________________
+📂 Step 2: Create Sample Data (Excel Structure)
+📄 Fact_Sales
+OrderID	DateKey	ProductKey	CustomerKey	SalesAmount	Quantity	Discount
+1001	20250101	P01	C01	50000	1	0
+1002	20250102	P02	C02	20000	2	5
+1003	20250102	P03	C01	15000	1	0
+________________________________________
+📄 Dim_Product
+ProductKey	ProductName	Category	Brand
+P01	Laptop	Electronics	Dell
+P02	Mobile	Electronics	Samsung
+P03	Tablet	Electronics	Apple
+________________________________________
+📄 Dim_Customer
+CustomerKey	CustomerName	Gender	AgeGroup
+C01	Rahul	Male	25–35
+C02	Priya	Female	18–25
+________________________________________
+📄 Dim_Date
+DateKey	Date	Month	Quarter	Year
+20250101	01-01-2025	Jan	Q1	2025
+20250102	02-01-2025	Jan	Q1	2025
+________________________________________
+📄 Dim_Geography
+GeoKey	City	State	Country
+G01	Chennai	Tamil Nadu	India
+G02	Bangalore	Karnataka	India
+(GeoKey can be linked via Customer if needed)
+________________________________________
+🔌 Step 3: Load Tables into Power BI
+1.	Open Power BI Desktop
+2.	Home → Get Data → Excel
+3.	Load all tables
+4.	Go to Model View (diagram icon on left)
+________________________________________
+🔗 Step 4: Create Relationships (MOST IMPORTANT)
+ 
+ 
+Create These Relationships:
+From (Fact)	To (Dimension)	Cardinality
+Fact_Sales[ProductKey]	Dim_Product[ProductKey]	Many → One
+Fact_Sales[CustomerKey]	Dim_Customer[CustomerKey]	Many → One
+Fact_Sales[DateKey]	Dim_Date[DateKey]	Many → One
+Relationship Settings:
+•	✔ Cross filter: Single
+•	✔ Direction: Dimension → Fact
+•	❌ No bi-directional filters
+📌 This forms a perfect STAR shape
+________________________________________
+⭐ Step 5: Validate Star Schema (Model Check)
+✔ Fact table in center
+✔ Dimensions around it
+✔ No dimension-to-dimension joins
+✔ No loops
+➡️ Star Schema is correct
+ 
+ 
+ 
+ 
+ 
+
+🎯 Aim
+To design a Star Schema data model in Microsoft Power BI Desktop by loading fact and dimension tables, and creating proper relationships in Model View for efficient reporting.
+________________________________________
+🧭 Algorithm (12 Points)
+1.	Create Excel sheets for Fact_Sales, Dim_Product, Dim_Customer, Dim_Date, and Dim_Geography with the given structure.
+2.	Open Microsoft Power BI Desktop.
+3.	Click Home → Get Data → Excel and select the file.
+4.	Load all five tables into Power BI.
+5.	Go to Model View (Diagram icon on the left panel).
+6.	Identify the Fact_Sales table as the central fact table.
+7.	Drag ProductKey from Dim_Product to Fact_Sales to create a relationship.
+8.	Drag CustomerKey from Dim_Customer to Fact_Sales to create a relationship.
+9.	Drag DateKey from Dim_Date to Fact_Sales to create a relationship.
+10.	(Optional) Link Dim_Geography to Dim_Customer using GeoKey, if present.
+11.	Ensure all relationships are One-to-Many from Dimension to Fact table.
+12.	Verify the final model forms a Star Schema with Fact_Sales at the center and dimension tables around it.
+

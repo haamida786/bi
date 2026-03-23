@@ -1,0 +1,65 @@
+1.	Create and Build a Power Query Pipeline from Monthly Sales Files.
+🎯 Task Flow
+From Folder → Standardize → Unpivot → De-duplicate → Data Quality Summary
+________________________________________
+✅ Step-by-Step
+Step 1 — Load From Folder
+1.	Open Excel / Power BI
+2.	Data → Get Data → From Folder
+3.	Select Monthly_Sales folder
+4.	Click Combine & Transform
+Power Query automatically merges Jan & Feb.
+________________________________________
+Step 2 — Standardize Column Names
+Rename:
+Old Name	New Name
+OrderID	order_id
+Order Date	order_date
+City Name	city
+________________________________________
+Step 3 — Trim & Clean City
+Select city →
+Transform → Format → Trim
+Transform → Format → Clean
+________________________________________
+Step 4 — Fix Data Types
+•	order_id → Whole Number
+•	order_date → Date
+•	city → Text
+________________________________________
+Step 5 — Unpivot Product Columns
+Select: Product_A, Product_B, Product_C
+Right click → Unpivot Columns
+Rename:
+•	Attribute → product
+•	Value → quantity
+________________________________________
+Step 6 — Remove Duplicates
+Select order_id → Remove Duplicates
+(Feb has duplicate 1003)
+________________________________________
+Step 7 — Create Data Quality Summary
+Duplicate query → Group By → Count Rows
+Check:
+•	Missing quantity
+•	Duplicate IDs
+________________________________________
+✅ Output
+Clean long table + quality summary.
+ 
+🎯 Aim
+To build a Power Query pipeline that combines multiple monthly files from a folder, standardizes the data, unpivots wide tables, removes duplicates, assigns correct data types, and prepares a data quality summary.
+🧭 Algorithm (12 Points)
+1.	Open Excel / Power BI and choose Get Data → From Folder.
+2.	Select the folder containing Jan_Sales and Feb_Sales files.
+3.	Click Combine & Transform to merge the monthly files.
+4.	Rename column headers to standard names (order_id, order_date, city).
+5.	Use Trim and Clean to standardize city text values.
+6.	Convert columns to proper data types (date, text, whole number).
+7.	Select Product_A, Product_B, Product_C columns.
+8.	Apply Unpivot Columns to convert wide table into long format.
+9.	Rename columns as product and quantity.
+10.	Remove duplicate records using order_id.
+11.	Duplicate the query and apply Group By → Count Rows for quality check.
+12.	Prepare a Data Quality Summary and load the final cleaned table.
+

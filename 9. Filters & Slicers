@@ -1,0 +1,51 @@
+9. Create and implement Visual Level, Page Level, and Report Level Filters in Power BI for effective data analysis.
+Filters, Slicers, and Drill-Down are the core interactive features that make Power BI reports powerful.
+I’ll give you clear step-by-step practical instructions you can follow directly in Power BI Desktop.
+________________________________________
+🔹 1. FILTERS in Power BI (Step by Step)
+Filters control what data is shown in visuals, pages, or the entire report.
+👉 Types of Filters
+Filter Type	Works On
+Visual Level	Only one chart
+Page Level	All charts in one page
+Report Level	Entire report
+✅ Steps to Apply Filters
+1.	Open Power BI Desktop
+2.	Load your data (Home → Get Data → Excel)
+3.	Create any visual (e.g., Bar chart)
+4.	On the right side, you will see Filters pane
+▶ Visual Level Filter
+5.	Click the chart
+6.	In Filters pane → drag a field (e.g., Category)
+7.	Choose values you want (tick/untick)
+➡ Only that chart changes.
+▶ Page Level Filter
+8.	In Filters pane → under Page level filters
+9.	Drag a field (e.g., Region)
+10.	Select values
+➡ All visuals on this page change.
+▶ Report Level Filter
+11.	Under Report level filters
+12.	Drag field (e.g., Year)
+13.	Select values
+➡ Entire report changes.
+ 
+ 
+
+🎯 Aim
+To apply and understand Visual Level, Page Level, and Report Level Filters in Power BI to control and analyze data effectively within a report.
+________________________________________
+🧩 Algorithm (12 Points)
+1.	Open Power BI Desktop.
+2.	Click on Home → Get Data → Excel and load the dataset PowerBI_Filters_Slicers_Drill.xlsx.
+3.	After loading, go to the Report View.
+4.	Create a Bar Chart visual to display Sales by Product.
+5.	Select the Bar Chart and open the Filters pane.
+6.	Drag the Category field into the Visual Level Filters section.
+7.	Select only Electronics to filter the bar chart.
+8.	In the Filters pane, drag the Region field into the Page Level Filters section.
+9.	Select only North and East regions to filter the entire page.
+10.	Drag the Year field into the Report Level Filters section.
+11.	Select the year 2024 to filter the whole report.
+12.	Observe how each filter affects the visual, page, and report differently and verify the filtered results using a Table visual.
+

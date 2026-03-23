@@ -1,0 +1,75 @@
+7. create and normalize a flat CSV dataset in Microsoft Power BI Desktop by creating dimension and fact tables using Power Query, replacing text fields with keys, and exporting the normalized result
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+🔹 PART A: NORMALIZE (FROM THE SAME FILE)
+________________________________________
+🛠 Step 1: Load the CSV
+1.	Open Power BI Desktop
+2.	Home → Get Data → Text/CSV
+3.	Select Sales_Flat.csv
+4.	Click Transform Data
+➡️ Power Query Editor opens
+➡️ One query: Sales_Flat
+________________________________________
+🧱 Step 2: Create Dimension Tables (From Same File)
+✅ Step 2.1: Create Dim_Customer
+1.	Right-click Sales_Flat → Duplicate
+2.	Rename to Dim_Customer
+3.	Keep only:
+o	CustomerName
+4.	Home → Remove Rows → Remove Duplicates
+5.	Add Column → Index Column → From 1
+6.	Rename index to CustomerKey
+✔ Customer dimension created
+________________________________________
+
+🧮 Step 2: Create Fact_Sales
+1.	Right-click Sales_Flat → Duplicate
+2.	Rename → Fact_Sales
+3.	Keep columns:
+o	OrderID
+o	OrderDate
+o	CustomerName
+o	Product
+o	Sales
+o	Quantity
+________________________________________
+🔗 Step 4: Replace Text with Keys (Normalization)
+🔹 Replace CustomerName
+1.	Select Fact_Sales
+2.	Home → Merge Queries
+3.	Merge with Dim_Customer on CustomerName
+4.	Expand → CustomerKey
+5.	Remove CustomerName
+✔ Data is now NORMALIZED
+✔ Still using ONE original CSV
+________________________________________
+📤 Step 6: Export Final Flat Table
+1.	Close & Apply
+2.	Add Table visual
+3.	Click ⋯ → Export data → CSV
+🎯 Aim
+To normalize a flat CSV dataset in Microsoft Power BI Desktop by creating dimension and fact tables using Power Query, replacing text fields with keys, and exporting the normalized result.
+________________________________________
+🧭 Algorithm (12 Points)
+1.	Open Microsoft Power BI Desktop.
+2.	Click Home → Get Data → Text/CSV and select Sales_Flat.csv.
+3.	Click Transform Data to open Power Query Editor.
+4.	Right-click Sales_Flat query and choose Duplicate to create a new query.
+5.	Rename the duplicated query as Dim_Customer.
+6.	Keep only the CustomerName column and remove duplicates.
+7.	Add an Index Column (From 1) and rename it as CustomerKey.
+8.	Duplicate Sales_Flat again and rename it as Fact_Sales.
+9.	In Fact_Sales, keep required columns: OrderID, OrderDate, CustomerName, Product, Sales, Quantity.
+10.	Use Merge Queries to join Fact_Sales with Dim_Customer on CustomerName.
+11.	Expand and keep CustomerKey, then remove the CustomerName column to complete normalization.
+12.	Click Close & Apply, create a table visual, and Export the normalized data to CSV.
+
+
+

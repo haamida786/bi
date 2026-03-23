@@ -1,0 +1,53 @@
+✅ Step-by-Step — Create Pivot Table (Matrix) in Power BI
+Step 1 — Load Data
+1.	Open Microsoft Power BI Desktop
+2.	Home → Get Data → Excel/CSV
+3.	Load your dataset
+4.	Click Report View
+________________________________________
+Step 2 — Add Matrix Visual
+1.	From Visualizations pane
+2.	Click Matrix icon
+3.	Blank matrix appears on report
+________________________________________
+Step 3 — Set Rows (like Pivot Rows)
+Drag a field to Rows
+Example:
+•	Drag Region → Rows
+________________________________________
+Step 4 — Set Columns (like Pivot Columns)
+Drag a field to Columns
+Example:
+•	Drag Product → Columns
+________________________________________
+Step 5 — Set Values (like Pivot Values)
+Drag numeric field to Values
+Example:
+•	Drag Sales → Values
+•	It shows Sum of Sales
+________________________________________
+Step 6 — Format Like Pivot
+1.	Click the Matrix
+2.	Go to Format pane
+3.	Turn ON:
+o	Subtotals
+o	Grand Totals
+o	Row headers
+Now it behaves exactly like a Pivot Table.
+🎯 Aim
+To create a Pivot Table–style report in Microsoft Power BI Desktop using the Matrix visual to analyze sales by Region and Product.
+________________________________________
+🧭 Algorithm (12 Points)
+1.	Open Microsoft Power BI Desktop.
+2.	Click Home → Get Data → Excel.
+3.	Select the file PowerBI_Pivot_Practice.xlsx and load the data.
+4.	Go to Report View.
+5.	Click on the Matrix visual from the Visualizations pane.
+6.	Drag the Region field into the Rows section.
+7.	Drag the Product field into the Columns section.
+8.	Drag the Sales field into the Values section.
+9.	Ensure the aggregation is set to Sum of Sales.
+10.	Enable Subtotals and Grand Totals from the Format pane.
+11.	Sort the matrix in descending order based on total sales.
+12.	Observe and analyze the pivot-style summary of sales by region and product.
+

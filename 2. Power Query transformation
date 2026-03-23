@@ -1,0 +1,30 @@
+✅ Step-by-Step
+Step 1 — Get Data From Folder (Quarter_Sales)
+Combine files.
+Step 2 — Standardize column names
+Step 3 — Trim & Clean city values (" Trichy " issue)
+Step 4 — Correct data types
+Step 5 — Unpivot product columns
+Step 6 — Remove duplicates (OrderID 2003 repeated)
+Step 7 — Build Data Quality Summary table:
+Check	Result
+Total Rows	?
+Duplicate Rows	?
+Missing Quantity	?
+Distinct Products	?
+🎯 Aim
+To perform an advanced Power Query transformation by combining quarterly files from a folder and applying data standardization, unpivoting, de-duplication, type correction, and data quality validation.
+🧭 Algorithm (12 Points)
+1.	Open Excel / Power BI and select Get Data → From Folder.
+2.	Choose the folder containing Mar_Sales and Apr_Sales files.
+3.	Use Combine & Transform to append the files.
+4.	Standardize column names into lowercase meaningful names.
+5.	Apply Trim and Clean on city column to remove spaces.
+6.	Assign correct data types for all columns.
+7.	Select product columns and perform Unpivot Columns.
+8.	Rename Attribute and Value columns to product and quantity.
+9.	Remove duplicate records based on order_id.
+10.	Verify no missing or invalid quantity values.
+11.	Create a duplicate query and perform Group By for row count.
+12.	Create and load a Data Quality Summary table.
+

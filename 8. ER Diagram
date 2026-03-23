@@ -1,0 +1,94 @@
+ 
+
+Here’s the exact step-by-step you can follow 👇
+________________________________________
+✅ Step 1 — Load Your Tables
+1.	Open Power BI Desktop
+2.	Click Home → Get Data
+3.	Load your tables (Excel / CSV / Database)
+Example tables:
+•	Customers
+•	Orders
+•	Products
+•	Payments
+Once loaded → you already have the “entities” of ER diagram.
+________________________________________
+✅ Step 2 — Go to Model View (This is your ER Diagram)
+On the left side, click the Model icon (3rd icon).
+🎯 This screen = ER Diagram automatically generated
+Each table = Entity
+Each column = Attributes
+________________________________________
+✅ Step 3 — Create Relationships (This draws the ER lines)
+If Power BI didn’t auto-create:
+1.	Drag CustomerID from Customers → drop on Orders.CustomerID
+2.	Drag ProductID from Products → Orders.ProductID
+3.	Drag OrderID from Orders → Payments.OrderID
+Now you will see lines between tables.
+These lines are your relationships in ER diagram.
+________________________________________
+✅ Step 4 — Set Cardinality (Very Important for ER)
+Double click the relationship line.
+Set:
+Relationship	Cardinality	Meaning
+Customers → Orders	One to Many (1:*)	One customer, many orders
+Products → Orders	One to Many (1:*)	One product, many orders
+Orders → Payments	One to One (1:1) or 1:*	Depends
+Click OK
+Now your ER diagram is logically correct.
+________________________________________
+✅ Step 5 — Arrange Tables like ER Diagram
+You can drag tables and arrange like this:
+Customers    Products
+      \      /
+        Orders
+          |
+       Payments
+This becomes your schema mockup.
+________________________________________
+✅ Step 6 — Hide Unnecessary Columns (to look like clean ER)
+Right click column → Hide in report view
+Keep only:
+•	Primary keys
+•	Foreign keys
+•	Important fields
+Now it looks exactly like a professional ER diagram.
+________________________________________
+✅ Step 7 — Rename Tables & Columns (Schema Style)
+Rename like database schema:
+•	tbl_Customers
+•	tbl_Orders
+•	tbl_Products
+Rename columns:
+•	Customer_ID
+•	Order_ID
+•	Product_ID
+Now it looks like database schema mockup.
+________________________________________
+✅ Step 8 — Screenshot / Export for Documentation
+This Model view = your ER diagram.
+Take screenshot and use in:
+•	Documentation
+•	PPT
+•	Project report
+•	Training material
+
+
+
+✅ Aim
+To design and visualize an Entity-Relationship (ER) diagram and schema mockup by importing multiple related tables from Excel into Power BI and creating relationships using the Model View.
+________________________________________
+✅ Algorithm
+1.	Prepare an Excel file containing multiple related tables such as Customers, Products, Orders, and Payments with proper primary and foreign keys.
+2.	Open Power BI Desktop and select Home → Get Data → Excel to import the prepared Excel file.
+3.	Load all the sheets (tables) into Power BI Data Model.
+4.	After loading, navigate to the Model View to visualize the tables as entities.
+5.	Identify the Primary Keys in each table (Customer_ID, Product_ID, Order_ID, Payment_ID).
+6.	Identify the Foreign Keys used to connect the tables (Customer_ID in Orders, Product_ID in Orders, Order_ID in Payments).
+7.	Create relationships by dragging the foreign key column from one table to the corresponding primary key column in another table.
+8.	Set the cardinality of relationships appropriately (One-to-Many between Customers and Orders, Products and Orders, Orders and Payments).
+9.	Arrange the tables properly in the Model View to resemble a clear ER diagram structure.
+10.	Hide unnecessary columns and keep only important keys and attributes to make the schema clean and readable.
+11.	Rename tables and columns, if required, to follow proper database schema naming conventions.
+12.	Save the Power BI file and capture the Model View as the final ER diagram and schema mockup for documentation.
+

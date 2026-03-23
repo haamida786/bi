@@ -1,0 +1,39 @@
+12. create and Import the HR dataset into Power BI and design an interactive dashboard to analyze employee information.
+
+ 
+ 
+
+👥 HR Dashboard — Step by Step in Power BI
+1) Load Data
+Home → Get Data → Excel → Select PowerBI_HR_Dashboard.xlsx → Load
+2) Create Visuals
+Visual	Fields
+Bar Chart	Department → Axis, EmployeeName → Count
+Pie Chart	Gender → Legend, EmployeeName → Count
+Column Chart	Department → Axis, Salary → Values
+Card	EmployeeName (Count)
+Table	EmployeeName, Department, Salary, Experience
+3) Add Slicers
+•	Slicer → Department
+•	Slicer → Gender
+•	Slicer → Attrition
+4) Arrange visuals neatly → HR dashboard ready
+
+
+👥 HR Dashboard in Power BI
+🎯 Aim
+To create an interactive HR dashboard in Power BI to analyze employee distribution, salary, gender ratio, and attrition using visuals and slicers.
+🧩 Algorithm (12 Points)
+1.	Open Power BI Desktop.
+2.	Click Home → Get Data → Excel.
+3.	Select PowerBI_HR_Dashboard.xlsx and click Load.
+4.	Go to Report View.
+5.	Insert a Bar Chart and place Department → Axis, EmployeeName → Count.
+6.	Insert a Pie Chart and place Gender → Legend, EmployeeName → Count.
+7.	Insert a Column Chart and place Department → Axis, Salary → Values.
+8.	Insert a Card visual and place EmployeeName → Count.
+9.	Insert a Table visual with EmployeeName, Department, Salary, and Experience.
+10.	Add a Slicer and drag Department into it.
+11.	Add a Slicer and drag Gender into it.
+12.	Add a Slicer for Attrition and test the dashboard interactivity.
+

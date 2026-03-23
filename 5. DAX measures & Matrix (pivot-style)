@@ -1,0 +1,109 @@
+5. create and validate DAX measures in Microsoft Power BI Desktop using a Matrix (pivot-style) visual with slicers, and to document the measures using a Measure Catalogue table for reporting and export. 
+  
+
+📂 Step 0: Sample Data (Create in Excel)
+Create an Excel file called SalesData.xlsx
+Sheet: Sales
+OrderDate	Region	Product	Sales	Quantity
+01-01-2025	North	Laptop	50000	2
+01-01-2025	South	Mobile	20000	5
+02-01-2025	North	Mobile	15000	3
+02-01-2025	East	Laptop	55000	1
+03-01-2025	West	Tablet	12000	4
+03-01-2025	South	Laptop	48000	1
+________________________________________
+🔌 Step 1: Load Data into Power BI
+1.	Open Power BI Desktop
+2.	Click Home → Get Data → Excel
+3.	Select SalesData.xlsx
+4.	Load the Sales sheet
+5.	Go to Report View
+________________________________________
+🧮 Step 2: Create Measures (New Measure)
+Go to Data pane → Right-click → New measure
+Measure 1: Total Sales
+Total Sales = SUM(Sales[Sales])
+Measure 2: Total Quantity
+Total Quantity = SUM(Sales[Quantity])
+Measure 3: Average Sales per Order
+Avg Sales = AVERAGE(Sales[Sales])
+Measure 4: Sales per Quantity
+Sales per Qty = DIVIDE([Total Sales], [Total Quantity])
+________________________________________
+📊 Step 3: Validate Measures Using Pivot-style Visual (Matrix)
+Create a Matrix (acts like PivotTable)
+1.	Insert Matrix visual
+2.	Drag:
+o	Rows → Region
+o	Columns → Product
+o	Values →
+	Total Sales
+	Total Quantity
+	Sales per Qty
+📌 This matrix behaves like an Excel PivotTable
+________________________________________
+🔍 Step 4: Add Slicers for Validation
+Create slicers:
+1.	Insert Slicer
+2.	Add:
+o	Region
+o	Product
+o	OrderDate
+Validation Checklist
+Try:
+•	Selecting South only → Sales update?
+•	Selecting Laptop only → Qty changes?
+•	Multiple slicers together → Measures recalculate?
+✅ If yes → Measures are valid
+________________________________________
+🧾 Step 5: Create a “Measure Catalogue” Table
+Create a Manual Table
+1.	Go to Home → Enter Data
+2.	Name table: Measure Catalogue
+Measure Name	DAX Formula	Description	Used In Visual
+Total Sales	SUM(Sales[Sales])	Total revenue	Matrix
+Total Quantity	SUM(Sales[Quantity])	Units sold	Matrix
+Avg Sales	AVERAGE(Sales[Sales])	Avg per order	KPI
+Sales per Qty	DIVIDE(TS,TQ)	Efficiency	Matrix
+Click Load
+________________________________________
+📑 Step 6: Display Measure Catalogue in Report
+1.	Insert Table visual
+2.	Add all columns from Measure Catalogue
+3.	Resize and format neatly
+4.	Title it:
+📘 Measure Catalogue
+________________________________________
+📤 Step 7: Export the Measure Catalogue
+Option 1: Export from Power BI
+1.	Click ⋯ (More options) on the table
+2.	Select Export data
+3.	Choose Excel (.xlsx)
+Option 2: Copy to Excel
+•	Copy visual → Paste into Excel / Word for documentation
+________________________________________
+✅ Final Validation Checklist
+✔ Measures recalculate with slicers
+✔ Matrix totals match expected values
+✔ Measure Catalogue documents:
+•	Name
+•	Formula
+•	Purpose
+•	Usage
+🎯 Aim
+To create and validate DAX measures in Microsoft Power BI Desktop using a Matrix (pivot-style) visual with slicers, and to document the measures using a Measure Catalogue table for reporting and export.
+________________________________________
+🧭 Algorithm (12 Points)
+1.	Create an Excel file SalesData.xlsx with the given sales dataset.
+2.	Open Microsoft Power BI Desktop and load the Excel file using Home → Get Data.
+3.	Load the Sales sheet and move to Report View.
+4.	In the Fields pane, right-click the Sales table and select New Measure.
+5.	Create the measure Total Sales using SUM(Sales[Sales]).
+6.	Create the measure Total Quantity using SUM(Sales[Quantity]).
+7.	Create Avg Sales and Sales per Qty using AVERAGE and DIVIDE.
+8.	Insert a Matrix visual and place Region in Rows, Product in Columns, and all measures in Values.
+9.	Insert Slicers for Region, Product, and OrderDate to validate dynamic recalculation of measures.
+10.	Use Home → Enter Data to create a new table named Measure Catalogue.
+11.	Add columns for Measure Name, DAX Formula, Description, and Used In Visual, then load the table.
+12.	Display the Measure Catalogue using a Table visual and export it to Excel for documentation.
+

@@ -1,0 +1,64 @@
+create an Executive Summary page and implement a Visual Walkthrough in Power BI using multiple report pages, visuals, slicers, and navigation buttons for effective data presentation
+
+ 
+ 
+ 
+
+🎯 Part 1 — Load the Data
+1.	Open Power BI Desktop
+2.	Home → Get Data → Excel
+3.	Select the file → Load
+________________________________________
+🧭 Part 2 — Create Executive Summary Page
+Step 1 — Rename Page
+Rename Page 1 as Executive Summary
+Step 2 — Add KPI Cards (Top)
+Insert Card visuals:
+•	Drag Sales → shows Total Sales
+•	Drag Product → change to Count
+________________________________________
+Step 3 — Add Summary Charts
+Visual	Fields
+Bar Chart	Product → Axis, Sales → Values
+Pie Chart	Region → Legend, Sales → Values
+Line Chart	Date → Axis, Sales → Values
+________________________________________
+Step 4 — Add Slicer (Side)
+•	Insert Slicer
+•	Drag Category into slicer
+Now this page gives overall summary.
+________________________________________
+🎬 Part 3 — Create Visual Walkthrough Pages
+Step 1 — Add New Page → Rename Product Details
+•	Add Table: Product, Region, Sales
+•	Add Bar chart: Product vs Sales
+________________________________________
+Step 2 — Add Another Page → Rename Region Analysis
+•	Add Pie chart: Region vs Sales
+•	Add Table: Region, Product, Sales
+________________________________________
+🔘 Part 4 — Add Navigation Buttons (Walkthrough)
+1.	Go to Executive Summary
+2.	Insert → Buttons → Blank
+3.	Turn Action ON
+4.	Type → Page navigation
+5.	Destination → Product Details
+Repeat to link pages.
+Now you can click buttons to move page to page like a story.
+🎯 Aim
+To create an Executive Summary page and implement a Visual Walkthrough in Power BI using multiple report pages, visuals, slicers, and navigation buttons for effective data presentation.
+________________________________________
+🧩 Algorithm (12 Points)
+1.	Open Power BI Desktop.
+2.	Click Home → Get Data → Excel and load PowerBI_Executive_Summary_Practice.xlsx.
+3.	Rename the first report page as Executive Summary.
+4.	Insert Card visuals to display Total Sales and Count of Products.
+5.	Insert a Bar Chart with Product on Axis and Sales on Values.
+6.	Insert a Pie Chart with Region on Legend and Sales on Values.
+7.	Insert a Line Chart with Date on Axis and Sales on Values.
+8.	Add a Slicer and drag Category into it for interactivity.
+9.	Add a new page and rename it Product Details.
+10.	Insert a Table and Bar Chart to show detailed Product and Sales information.
+11.	Add another page named Region Analysis and create visuals for Region-wise sales.
+12.	Insert Buttons with Page Navigation to move between pages, creating a Visual Walkthrough of the report.
+

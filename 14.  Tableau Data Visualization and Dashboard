@@ -1,0 +1,51 @@
+14. Create Basic Data Visualization and Dashboard Creation using Tableau
+✅ Step 1 — Connect Excel to Tableau
+1.	Open Tableau Desktop
+2.	Click Microsoft Excel
+3.	Select Tableau_Lab_SalesData.xlsx
+4.	Drag SalesData sheet to the canvas
+5.	Click Sheet 1
+You will see fields:
+Order ID, Order Date, Region, Category, Sub-Category, Sales, Profit
+________________________________________
+📊 Step 2 — Bar Chart (Sales by Region)
+1.	Drag Region → Rows
+2.	Drag Sales → Columns
+3.	Chart becomes Bar chart
+4.	Click Sort Descending
+5.	Rename sheet: Sales by Region
+________________________________________
+📈 Step 3 — Line Chart (Sales over Time)
+1.	New Sheet
+2.	Drag Order Date → Columns
+3.	Change it to Month
+4.	Drag Sales → Rows
+5.	Change Marks to Line
+6.	Rename sheet: Monthly Sales Trend
+________________________________________
+🥧 Step 4 — Pie Chart (Sales by Category)
+1.	New Sheet
+2.	Change Marks → Pie
+3.	Drag Category → Color
+4.	Drag Sales → Angle
+5.	Drag Sales → Label
+6.	Rename sheet: Category Wise Sales
+________________________________________
+
+🎯 Aim
+To connect an Excel dataset to Tableau and create different visualizations (Bar chart, Line chart, Pie chart, Map) and combine them into an interactive dashboard using filters.
+________________________________________
+🧭 Algorithm (12 Steps)
+1.	Start the Tableau Desktop application.
+2.	Select Microsoft Excel from the Connect panel.
+3.	Browse and choose the file Tableau_Lab_SalesData.xlsx.
+4.	Load the Excel file into Tableau by opening the data source page.
+5.	Drag the SalesData worksheet to the data canvas.
+6.	Verify that all fields are loaded correctly in the Data pane.
+7.	Click on Sheet 1 to begin visualization.
+8.	Drag the Region dimension to the Rows shelf.
+9.	Drag the Sales measure to the Columns shelf.
+10.	Observe the automatically generated bar chart.
+11.	Sort the bar chart in descending order based on sales values.
+12.	Rename the worksheet as Sales by Region.
+

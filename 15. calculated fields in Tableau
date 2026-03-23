@@ -1,0 +1,65 @@
+15 Create a new calculated fields in Tableau for retail data and use them in visualizations and dashboards.
+
+🧭 Step-by-Step Procedure
+✅ Step 1 — Connect Excel
+1.	Open Tableau → Microsoft Excel
+2.	Select Tableau_Formula_RetailData.xlsx
+3.	Drag sheet → Open Sheet 1
+Fields available:
+Order ID, Order Date, Region, Product, Quantity, Unit Price
+________________________________________
+✅ Step 2 — Create Calculated Field: Total Amount
+1.	Go to Analysis → Create Calculated Field
+2.	Name: Total Amount
+3.	Formula:
+[Quantity] * [Unit Price]
+4.	Click OK
+________________________________________
+✅ Step 3 — Create Calculated Field: Discount (10% if amount > 50000)
+1.	Create Calculated Field
+2.	Name: Discount
+3.	Formula:
+IF [Total Amount] > 50000 THEN [Total Amount] * 0.10
+ELSE 0
+END
+________________________________________
+✅ Step 4 — Create Calculated Field: Final Amount
+1.	Create Calculated Field
+2.	Name: Final Amount
+3.	Formula:
+[Total Amount] - [Discount]
+________________________________________
+📊 Step 5 — Bar Chart (Final Amount by Region)
+1.	Drag Region → Rows
+2.	Drag Final Amount → Columns
+3.	Sort descending
+________________________________________
+📈 Step 6 — Line Chart (Final Amount by Date)
+1.	New Sheet
+2.	Drag Order Date → Columns (Month)
+3.	Drag Final Amount → Rows
+4.	Marks → Line
+________________________________________
+🎛️ Step 7 — Apply Region Filter
+•	Drag Region → Filters → Show Filter
+________________________________________
+🧩 Step 8 — Create Dashboard
+•	Add both charts
+
+🎯 Aim
+To create new calculated fields in Tableau and use them in visualizations and dashboards.
+🧭 Algorithm (12 Points)
+1.	Open Tableau Desktop.
+2.	Connect the Excel file to Tableau.
+3.	Load the dataset into the worksheet.
+4.	Create a calculated field Total Amount.
+5.	Apply formula Quantity × Unit Price.
+6.	Create calculated field Discount using IF condition.
+7.	Create calculated field Final Amount.
+8.	Drag Region and Final Amount to create bar chart.
+9.	Create line chart using Order Date and Final Amount.
+10.	Apply Region as filter.
+11.	Show filter for interaction.
+12.	Create dashboard combining charts.
+
+

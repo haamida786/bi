@@ -1,0 +1,123 @@
+
+1.	Open Microsoft Power BI Desktop
+2.	Load your data (Home → Get Data)
+3.	Go to Report View
+4.	In Fields pane → right-click your table → New measure
+________________________________________
+🔹 MEASURE 1: Net Sales
+👉 What it means
+Total revenue from sales.
+🛠 Steps
+1.	Right-click Sales table
+2.	Click New Measure
+3.	Type:
+Net Sales = SUM(Sales[SalesAmount])
+✔ Press Enter
+________________________________________
+🔹 MEASURE 2: Total Cost
+Total Cost = SUM(Sales[Cost])
+________________________________________
+🔹 MEASURE 3: Gross Margin (GM)
+👉 Profit value
+Gross Margin = [Net Sales] - [Total Cost]
+________________________________________
+🔹 MEASURE 4: Gross Margin %
+👉 Profit percentage
+GM % = DIVIDE([Gross Margin], [Net Sales], 0)
+📌 Format → Percentage (2 decimals)
+________________________________________
+🔹 MEASURE 5: Total Orders
+Total Orders = DISTINCTCOUNT(Sales[OrderID])
+________________________________________
+🔹 MEASURE 6: Total Visits
+Total Visits = SUM(Sales[Visits])
+________________________________________
+🔹 MEASURE 7: Conversion Rate %
+👉 Orders ÷ Visits
+Conversion Rate % = 
+DIVIDE([Total Orders], [Total Visits], 0)
+📌 Format → Percentage
+________________________________________
+🔹 MEASURE 8: Net Sales YTD (Year-to-Date)
+👉 You MUST have a Date table
+Step A: Create Date Table
+DateTable = 
+ADDCOLUMNS(
+    CALENDAR (DATE(2020,1,1), DATE(2030,12,31)),
+    "Year", YEAR([Date]),
+    "Month", FORMAT([Date], "MMM")
+)
+Step B: Relate Date → Sales[Date]
+Step C: YTD Measure
+Net Sales YTD =
+TOTALYTD(
+    [Net Sales],
+    DateTable[Date]
+)
+________________________________________
+🔹 MEASURE 9: Net Sales YoY Growth %
+Net Sales YoY % =
+VAR PrevYearSales =
+    CALCULATE(
+        [Net Sales],
+        SAMEPERIODLASTYEAR(DateTable[Date])
+    )
+RETURN
+DIVIDE([Net Sales] - PrevYearSales, PrevYearSales, 0)
+📌 Format → Percentage
+________________________________________
+🔹 MEASURE 10: Contribution %
+👉 Share of total sales
+Contribution % =
+DIVIDE(
+    [Net Sales],
+    CALCULATE([Net Sales], ALL(Sales)),
+    0)________________________________________
+📊 HOW TO SHOW THESE IN REPORT
+ 
+ 
+ 
+1️⃣ Cards
+•	Insert Card
+•	Drag:
+o	Net Sales
+o	GM %
+o	Conversion Rate %
+________________________________________
+2️⃣ KPI Table
+Insert Table visual
+Add:
+•	Net Sales
+•	GM %
+•	Net Sales YoY %
+•	Contribution %
+•	KPI Flags
+________________________________________
+3️⃣ Conditional Formatting
+1.	Click table → dropdown on measure
+2.	Conditional formatting → Background color
+3.	Based on KPI flag
+________________________________________
+✅ FINAL CHECKLIST (Exam / Interview Ready)
+✔ Measures vs Columns understood
+✔ YTD needs Date table
+✔ YoY uses SAMEPERIODLASTYEAR
+✔ KPI flags use IF logic
+✔ Contribution uses ALL()
+🎯 Aim
+To create essential DAX measures in Microsoft Power BI Desktop for sales analysis, including revenue, cost, profit, conversion metrics, and time-intelligence calculations (YTD and YoY).
+________________________________________
+🧭 Algorithm (12 Points)
+1.	Open Microsoft Power BI Desktop and load the Sales dataset using Home → Get Data.
+2.	Go to Report View and open the Fields pane.
+3.	Right-click the Sales table and choose New Measure.
+4.	Create Net Sales measure using SUM(Sales[SalesAmount]).
+5.	Create Total Cost measure using SUM(Sales[Cost]).
+6.	Create Gross Margin using [Net Sales] - [Total Cost].
+7.	Create GM % using DIVIDE([Gross Margin], [Net Sales], 0) and format as Percentage.
+8.	Create Total Orders using DISTINCTCOUNT(Sales[OrderID]).
+9.	Create Total Visits using SUM(Sales[Visits]) and Conversion Rate % using Orders ÷ Visits.
+10.	Create a Date Table using CALENDAR and relate it to Sales[Date].
+11.	Create Net Sales YTD using TOTALYTD([Net Sales], DateTable[Date]).
+12.	Create Net Sales YoY % and Contribution % using time-intelligence and ALL function for total share calculation.
+

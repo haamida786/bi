@@ -1,0 +1,38 @@
+10. create and use a Slicer in Power BI to interactively filter and analyze sales data based on Region.
+
+ 
+ 
+
+🎯 Create a Slicer in Power BI (Step-by-Step — Short)
+1) Load Excel
+•	Open Power BI Desktop
+•	Home → Get Data → Excel
+•	Select PowerBI_Slicer_Practice.xlsx → Load
+2) Create a Visual
+•	Choose Bar Chart
+•	Drag:
+o	Product → Axis
+o	Sales → Values
+3) Insert Slicer
+•	Click blank area
+•	From Visualizations → Slicer
+•	Drag Region into the slicer
+👉 Now click North / South / East / West and watch the chart change.
+
+🎯 Aim
+To create and use a Slicer in Power BI to interactively filter and analyze sales data based on Region.
+________________________________________
+🧩 Algorithm (12 Points)
+1.	Open Power BI Desktop.
+2.	Click Home → Get Data → Excel.
+3.	Select the file PowerBI_Slicer_Practice.xlsx and click Load.
+4.	After loading, go to the Report View.
+5.	Insert a Bar Chart from the Visualizations pane.
+6.	Drag the Product field to the Axis area.
+7.	Drag the Sales field to the Values area.
+8.	Click on a blank space in the report canvas.
+9.	Select the Slicer visual from the Visualizations pane.
+10.	Drag the Region field into the Slicer.
+11.	Click different region values (North, South, East, West) and observe the changes in the bar chart.
+
+
